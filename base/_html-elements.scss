@@ -1,0 +1,32 @@
+//
+// HTML Base Elements
+// =============================================================================
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: $body-background;
+}
+
+
+// Tables
+
+table.borderless {
+  border: 0;
+
+  tbody, td {
+    border: 0;
+  }
+}
+
+.cke_editable table.borderless {
+  border: 1px $silver dashed;
+
+  td {
+    border: 1px $silver dashed;
+  }
+}

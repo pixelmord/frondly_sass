@@ -1,0 +1,49 @@
+//
+// Mixins - Useful mixins to achieve several functionalities
+// =============================================================================
+
+@import 'mixins.colors';
+@import 'mixins.hiding';
+@import 'mixins.ie';
+@import 'mixins.layout';
+@import 'mixins.shorthand';
+@import 'mixins.debug';
+
+@mixin clearfix() {
+  &:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
+// Placeholder text
+@mixin placeholder($color: $placeholderText) {
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
