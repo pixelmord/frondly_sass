@@ -26,7 +26,7 @@ $breakpoint-orientation-portrait: orientation portrait;
 
 $breakpoint-output = false;
 
-@if $breakpont-output == true {
+@if $breakpoint-output {
   //  Output the breakpoint config for use in JavaScript
   body:after {
     font-size: 0;
