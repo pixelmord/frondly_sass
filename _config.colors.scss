@@ -49,7 +49,28 @@ $link-color-hover:  darken($link-color, 20%);
 // Backgrounds
 // -----------------------------------------------------------------------------
 
+$base-body-color: $white;
 $body-background: $white;
+
+// -----------------------------------------------------------------------------
+// Functional color variables
+// -----------------------------------------------------------------------------
+
+$error-color: #C70000;
+$error-color-inverted: #FFDDDD;
+
+$warning-color: #ff9421;
+$warning-color-inverted:     #fffce5;
+
+$success-color: #1a7000;
+$success-color-inverted: #e5ffe2;
+
+$info-color: #005a93;
+$info-color-inverted: #bdf;
+
+$base-background-color: $white;
+$base-border-color: $mediumgray;
+$base-accent-color: lighten($carrot-orange, 20%);
 
 // -----------------------------------------------------------------------------
 // Other colors
