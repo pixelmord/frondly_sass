@@ -8,8 +8,11 @@
 }
 
 .messages {
-  background-position: 8px 8px;
-  background-repeat: no-repeat;
+  @if $use-icon-font == false {
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+  }
+
   border: $message-border-style;
   margin: 0.3em 0;
   padding: 0.7em 0.7em 0.7em 50px;
@@ -23,56 +26,63 @@
       list-style-image: none;
     }
   }
+  &.status {
+    @if $use-icon-font == false {
+      background-image: image-url('ok.png');
+    } @else {
+
+    }
+    background-color: $message-status-bgcolor;
+    border-color: $message-status-bordercolor;
+  }
+  &.warning {
+    @if $use-icon-font == false {
+      background-image: image-url('warning.png');
+    } @else {
+
+    }
+    background-color: $message-warning-bgcolor;
+    border-color: $message-warning-bordercolor;
+  }
+  &.error {
+    @if $use-icon-font == false {
+      background-image: image-url('error.png');
+    } @else {
+
+    }
+    background-color: $message-error-bgcolor;
+    border-color: $message-error-bordercolor;
+    color: $message-error-color;
+  }
 }
 
 // Status
 
-.status {
-  background-image: url(../../../../../misc/message-24-ok.png);
-  border-color: $message-status-bordercolor;
-  color: $message-status-color;
-}
-
+.status,
 .ok {
   color: $message-status-color;
 }
 
-.status, table tr.ok {
+table tr.ok {
   background-color: $message-status-bgcolor;
 }
 
 // Warning
 
 .warning {
-  background-image: url(../../../../../misc/message-24-warning.png);
-  border-color: $message-warning-bordercolor;
   color: $message-warning-color;
 }
 
-.warning {
-  color: $message-warning-color;
-}
-
-div.warning, table tr.warning {
+table tr.warning {
   background-color: $message-warning-bgcolor;
 }
 
 // Error
 
-div.error {
-  background-image: url(../../../../../misc/message-24-error.png);
-  border-color: $message-error-bordercolor;
-  color: $message-error-color;
-}
-
-.error {
-  color: $message-error-color;
-}
-
-div.error, table tr.error {
+table tr.error {
   background-color: $message-error-bgcolor;
 }
 
-div.error p.error {
+.error {
   color: $jet;
 }
