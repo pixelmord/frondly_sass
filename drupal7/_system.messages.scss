@@ -15,13 +15,23 @@
 
   border: $message-border-style;
   margin: 0.3em 0;
-  padding: 0.7em 0.7em 0.7em 50px;
-
+  padding: 0.7em;
+  @if $use-icon-font == false {
+    padding-left: 50px;
+  } @else {
+    &:before {
+      @extend .icon;
+      vertical-align: top;
+      font-size: 1.5em;
+      margin-right: .7em;
+    }
+  }
   @include border-radius($message-border-radius);
 
   ul {
     margin: 0 0 0 1em;
     padding: 0;
+    @include inline-block();
     li {
       list-style-image: none;
     }
@@ -30,7 +40,10 @@
     @if $use-icon-font == false {
       background-image: image-url('ok.png');
     } @else {
-
+      &:before {
+        color: $message-status-bordercolor;
+      }
+      @extend .icon-check-circle;
     }
     background-color: $message-status-bgcolor;
     border-color: $message-status-bordercolor;
@@ -39,7 +52,10 @@
     @if $use-icon-font == false {
       background-image: image-url('warning.png');
     } @else {
-
+      &:before {
+        color: $message-warning-bordercolor;
+      }
+      @extend .icon-exclamation-circle;
     }
     background-color: $message-warning-bgcolor;
     border-color: $message-warning-bordercolor;
@@ -48,7 +64,10 @@
     @if $use-icon-font == false {
       background-image: image-url('error.png');
     } @else {
-
+      &:before {
+        color: $message-error-bordercolor;
+      }
+      @extend .icon-minus-circle;
     }
     background-color: $message-error-bgcolor;
     border-color: $message-error-bordercolor;
