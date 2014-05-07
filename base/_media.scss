@@ -17,7 +17,7 @@ video {
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
-
+  @include inline-block();
   .ie8 & {
     width: auto; // IE8-Fix
   }
