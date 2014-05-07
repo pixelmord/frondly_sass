@@ -2,28 +2,28 @@
 // Buttons
 // --------------------------------------------------
 $btn-font-weight: normal !default;
-$btn-default-color: nth($grays, 8) !default;
-$btn-default-bg: nth($grays, 4) !default;
+$btn-default-color: nth($grays, 4) !default;
+$btn-default-bg: nth($grays, 8) !default;
 $btn-default-border: transparent !default;
 
-$btn-primary-color: $info-color !default;
-$btn-primary-bg: $info-color-inverted !default;
+$btn-primary-color: $info-color-inverted !default;
+$btn-primary-bg: $info-color !default;
 $btn-primary-border: transparent !default;
 
-$btn-success-color: $success-color !default;
-$btn-success-bg: $success-color-inverted !default;
+$btn-success-color: $success-color-inverted !default;
+$btn-success-bg: $success-color !default;
 $btn-success-border: transparent !default;
 
-$btn-info-color: lighten($info-color, 20%) !default;
-$btn-info-bg: lighten($info-color-inverted, 20%) !default;
+$btn-info-color: lighten($info-color-inverted, 20%) !default;
+$btn-info-bg: lighten($info-color, 20%) !default;
 $btn-info-border: transparent !default;
 
-$btn-warning-color: $warning-color !default;
-$btn-warning-bg: $warning-color-inverted !default;
+$btn-warning-color: $warning-color-inverted !default;
+$btn-warning-bg: $warning-color !default;
 $btn-warning-border: transparent !default;
 
-$btn-danger-color: $error-color !default;
-$btn-danger-bg: $error-color-inverted !default;
+$btn-danger-color: $error-color-inverted !default;
+$btn-danger-bg: $error-color !default;
 $btn-danger-border: transparent !default;
 
 $btn-link-disabled-color: nth($grays, 3) !default;
@@ -41,9 +41,9 @@ $btn-link-disabled-color: nth($grays, 3) !default;
   &:focus,
   &:active,
   &.active {
-    color: $color;
-    background-color: darken($background, 8%);
-    border-color: darken($border, 12%);
+    color: $color !important;
+    background-color: lighten($background, 8%);
+    border-color: lighten($border, 12%);
   }
   &:active,
   &.active {
