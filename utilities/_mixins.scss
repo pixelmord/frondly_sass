@@ -20,7 +20,7 @@
 }
 
 // Placeholder text
-@mixin placeholder($color: $placeholderText) {
+@mixin placeholder($color: $placeholder-color) {
   &:-moz-placeholder {
     color: $color;
   }

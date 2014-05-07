@@ -89,6 +89,7 @@ fieldset.collapsible .fieldset-legend {
 body.drag {
   cursor: move;
 }
+
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left; /* LTR */
@@ -97,19 +98,30 @@ body.drag {
   overflow: hidden;
   text-decoration: none;
 }
+
 a.tabledrag-handle:hover {
   text-decoration: none;
 }
+
 a.tabledrag-handle .handle {
-  background: url(../../misc/draggable.png) no-repeat 6px 9px;
+  @if $use-icon-font == false {
+    background: image-url('draggable.png') no-repeat 6px 9px;
+  } @else {
+    @extend .icon;
+    @extend .icon-arrows;
+  }
   height: 13px;
   margin: -0.4em 0.5em; /* LTR */
   padding: 0.42em 0.5em; /* LTR */
   width: 13px;
 }
+
 a.tabledrag-handle-hover .handle {
-  background-position: 6px -11px;
+  @if $use-icon-font == false {
+    background-position: 6px -11px;
+  }
 }
+
 div.indentation {
   float: left; /* LTR */
   height: 1.7em;
