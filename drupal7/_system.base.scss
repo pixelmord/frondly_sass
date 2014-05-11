@@ -30,12 +30,12 @@
 }
 /* Animated throbber */
 html.js input.form-autocomplete {
-  background-image: url(../images/throbber-inactive.gif);
+  background-image: image-url('throbber-inactive.gif');
   background-position: 98% 50%;
   background-repeat: no-repeat;
 }
 html.js input.throbbing {
-  background-image: url(../images/throbber-active.gif);
+  background-image: image-url('throbber-active.gif');
 }
 
 /**
@@ -125,13 +125,13 @@ div.indentation {
   width: 20px;
 }
 div.tree-child {
-  background: url(../../misc/tree.png) no-repeat 11px center; /* LTR */
+  background: image-url('tree.png') no-repeat 11px center; /* LTR */
 }
 div.tree-child-last {
-  background: url(../../misc/tree-bottom.png) no-repeat 11px center; /* LTR */
+  background: image-url('tree-bottom.png') no-repeat 11px center; /* LTR */
 }
 div.tree-child-horizontal {
-  background: url(../../misc/tree.png) no-repeat -11px center;
+  background: image-url('tree.png') no-repeat -11px center;
 }
 .tabledrag-toggle-weight-wrapper {
   text-align: right; /* LTR */
@@ -170,7 +170,7 @@ table.sticky-header {
   display: inline-block;
 }
 .ajax-progress .throbber {
-  background: transparent url(../../misc/throbber.gif) no-repeat 0px -18px;
+  background: transparent image-url('throbber.gif') no-repeat 0px -18px;
   float: left; /* LTR */
   height: 15px;
   margin: 2px;
