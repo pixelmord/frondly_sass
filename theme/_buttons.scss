@@ -33,7 +33,7 @@ $btn-link-disabled-color: nth($grays, 3) !default;
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 @mixin button-variant($color, $background, $border) {
-  color: $color;
+  color: $color !important; // we need important to override <A> colors
   background-color: $background;
   border-color: $border;
 
