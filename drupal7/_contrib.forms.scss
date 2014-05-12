@@ -1,0 +1,11 @@
+form {
+  .counter:not(.warning) {
+    margin: 5px 0;
+    line-height: 1.2em;
+    font-size: $form-small-text;
+    color: $mediumgray;
+    strong {
+      color: $base-accent-color;
+    }
+  }
+}

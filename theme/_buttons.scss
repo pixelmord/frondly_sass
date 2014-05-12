@@ -2,8 +2,8 @@
 // Buttons
 // --------------------------------------------------
 $btn-font-weight: normal !default;
-$btn-default-color: nth($grays, 4) !default;
-$btn-default-bg: nth($grays, 8) !default;
+$btn-default-color: nth($grays, 8) !default;
+$btn-default-bg: nth($grays, 4) !default;
 $btn-default-border: transparent !default;
 
 $btn-primary-color: $info-color-inverted !default;
@@ -70,7 +70,7 @@ $btn-link-disabled-color: nth($grays, 3) !default;
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
-  border-radius: $border-radius;
+  @include border-radius($border-radius);
 }
 
 @mixin btn() {

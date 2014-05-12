@@ -1,0 +1,33 @@
+$form-small-text: .9em !default;
+
+.form-required {
+  color: $error-color;
+}
+
+form {
+  .tips,
+  .fieldset-description,
+  .description {
+    margin: 5px 0;
+    line-height: 1.2em;
+    font-size: $form-small-text;
+    color: $mediumgray;
+  }
+  .fieldset-description,
+  .description {
+    color: rgba($base-accent-color, .7);
+  }
+}
+
+.form-wrapper,
+.form-item {
+  margin-bottom: 2em;
+  .form-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+
+.tabledrag-toggle-weight {
+  font-size: $form-small-text;
+}
