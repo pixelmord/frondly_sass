@@ -191,7 +191,7 @@ tr .ajax-progress .throbber {
  */
 .container-inline div,
 .container-inline label {
-  display: inline;
+  @include inline-block();
 }
 /* Fieldset contents always need to be rendered as block. */
 .container-inline .fieldset-wrapper {
